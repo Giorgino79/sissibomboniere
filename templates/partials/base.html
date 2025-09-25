@@ -1,0 +1,764 @@
+{% load static %}
+{% load i18n %}
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Sisi Bomboniere - Specialisti in Bomboniere per Ogni Occasione</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="description" content="Sisi Bomboniere offre una vasta selezione di bomboniere eleganti per matrimoni, battesimi, cresime e ogni occasione speciale. Qualità, eleganza e stile unico." />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:title" content="Sisi Bomboniere - Specialisti in Bomboniere per Ogni Occasione" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta name="keywords" content="bomboniere, matrimonio, battesimo, cresima, comunione, laurea, bomboniere eleganti, bomboniere personalizzate" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/imgs/theme/favicon.svg' %}" />
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/plugins/slider-range.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/custom-italian.css' %}" />
+    <!-- Sisi Bomboniere Custom CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/sisi-bomboniere.css' %}" />
+    <!-- Dancing Script Font for elegant branding -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+</head>
+
+<body>
+    
+    <header class="header-area header-style-1 header-height-2">
+        <div class="mobile-promotion bg-sisi-primary">
+            <span>🎀 Scopri le nostre <strong>bomboniere eleganti</strong> per ogni occasione speciale! <strong>Spedizione gratuita</strong> sopra i 50€</span>
+        </div>
+        <div class="header-top header-top-ptb-1 d-none d-lg-block">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-3 col-lg-4">
+                        <div class="header-info">
+                            <ul>
+                                <li><a href="{% url 'core:about_us' %}">{% trans 'About Us' %}</a></li>
+                                <li><a href="{% url 'core:dashboard' %}">{% trans 'My Account' %}</a></li>
+                                <li><a href="{% url 'core:wishlist' %}">{% trans 'Wishlist' %}</a></li>
+                                <li><a href="{% url 'core:dashboard' %}">{% trans 'Order Tracking' %}</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-4">
+                        <div class="text-center">
+                            <div id="news-flash" class="d-inline-block">
+                                <ul>
+                                    <li>🎀 Bomboniere personalizzate per ogni occasione speciale</li>
+                                    <li>🚚 Spedizione gratuita in Italia per ordini sopra i 50€</li>
+                                    <li>✨ Oltre 35 anni di tradizione nella creazione di bomboniere eleganti</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4">
+                        <div class="header-info header-info-right">
+                            <ul>
+                                <li>Hai bisogno di aiuto? Chiamaci: <strong class="text-sisi-primary">+39 06 1234567</strong></li>
+                                <li>
+                                    <a class="language-dropdown-active" href="#">
+                                        {% get_current_language as LANGUAGE_CODE %}
+                                        {% if LANGUAGE_CODE == 'it' %}Italiano{% else %}English{% endif %}
+                                        <i class="fi-rs-angle-small-down"></i>
+                                    </a>
+                                    <ul class="language-dropdown">
+                                        <li>
+                                            <form action="{% url 'set_language' %}" method="post" style="display: inline;">
+                                                {% csrf_token %}
+                                                <input name="language" type="hidden" value="it">
+                                                <button type="submit" style="background: none; border: none; padding: 0;">
+                                                    <img src="{% static 'assets/imgs/theme/flag-it.png' %}" alt="" style="width: 16px; height: 12px;"/>Italiano
+                                                </button>
+                                            </form>
+                                        </li>
+                                        <li>
+                                            <form action="{% url 'set_language' %}" method="post" style="display: inline;">
+                                                {% csrf_token %}
+                                                <input name="language" type="hidden" value="en">
+                                                <button type="submit" style="background: none; border: none; padding: 0;">
+                                                    <img src="{% static 'assets/imgs/theme/flag-dt.png' %}" alt="" style="width: 16px; height: 12px;"/>English
+                                                </button>
+                                            </form>
+                                        </li>
+                                    </ul>
+                                </li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-middle header-middle-ptb-1 d-none d-lg-block">
+            <div class="container">
+                <div class="header-wrap">
+                    <div class="logo logo-width-1">
+                        <a href="/" class="navbar-brand sisi-brand">Sisi Bomboniere</a>
+                    </div>
+                    <div class="header-right">
+                        <div class="search-style-2">
+                            <form action="{% url 'core:search' %}" method="GET">
+                                <select class="select-active">
+                                    <option>{% trans 'All Categories' %}</option>
+                                    <option>Milks and Dairies</option>
+                                    <option>Wines & Alcohol</option>
+                                    <option>Clothing & Beauty</option>
+                                    <option>Pet Foods & Toy</option>
+                                    <option>Fast food</option>
+                                    <option>Baking material</option>
+                                    <option>Vegetables</option>
+                                    <option>Fresh Seafood</option>
+                                    <option>Noodles & Rice</option>
+                                    <option>Ice cream</option>
+                                </select>
+                                <input type="text" placeholder="{% trans 'Search for items...' %}" name="q" />
+                                <button class="material-symbols-outlined" type="submit"><span class="material-symbols-outlined">search</span></button>
+
+                            </form>
+                        </div>
+                        <div class="header-action-right">
+                            <div class="header-action-2">
+                                <div class="header-action-icon-2">
+                                    <a href="{% url 'core:wishlist' %}">
+                                        <img class="svgInject" alt="E-commerce" src="{% static 'assets/imgs/theme/icons/icon-heart.svg' %}" />
+                                        {% if request.user.is_authenticated %}
+                                        <span class="pro-count blue">{{ wishlist.count }}</span>
+                                        {% else %}
+                                        <span class="pro-count blue">0</span>
+                                        {% endif %}
+                                    </a>
+                                    <a href="{% url 'core:wishlist' %}"><span class="lable">{% trans 'Wishlist' %}</span></a>
+                                </div>
+                                <div class="header-action-icon-2">
+                                    <a class="mini-cart-icon" href="{% url 'core:cart' %}">
+                                        <img alt="E-commerce" src="{% static 'assets/imgs/theme/icons/icon-cart.svg' %}" />
+                                        <span class="pro-count blue cart-items-count">{{ request.session.cart_data_obj|length }}</span>
+                                    </a>
+                                    <a href="{% url 'core:cart' %}"><span class="lable">{% trans 'Cart' %}</span></a>
+                                    <div class="cart-dropdown-wrap cart-dropdown-hm2">
+
+                                        <div class="shopping-cart-footer">
+
+                                            <div class="shopping-cart-button">
+                                                <a href="{% url 'core:cart' %}" class="outline">{% trans 'View cart' %}</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="header-action-icon-2">
+                                    <a href="{% url 'core:dashboard' %}">
+                                        <img class="svgInject" alt="E-commerce" src="{% static 'assets/imgs/theme/icons/icon-user.svg' %}" />
+                                    </a>
+                                    <a href="{% url 'core:dashboard' %}"><span class="lable ml-0">{% trans 'Account' %}</span></a>
+                                    <div class="cart-dropdown-wrap cart-dropdown-hm2 account-dropdown">
+                                        <ul>
+                                            <li><a href="{% url 'core:dashboard' %}"><i class="fi fi-rs-user mr-10"></i>{% trans 'My Account' %}</a></li>
+                                            <li><a href="{% url 'useradmin:dashboard' %}"><i class="fi fi-rs-user mr-10"></i>{% trans 'Admin Dashboard' %}</a></li>
+                                            <!-- <li><a href="#"><i class="fi fi-rs-location-alt mr-10"></i>Order Tracking</a></li> -->
+                                            <li><a href="{% url 'core:wishlist' %}"><i class="fi fi-rs-heart mr-10"></i>{% trans 'My Wishlist' %}</a></li>
+                                            <li><a href="{% url 'core:dashboard' %}"><i class="fi fi-rs-settings-sliders mr-10"></i>{% trans 'Setting' %}</a></li>
+
+                                            {% if request.user.is_authenticated %}
+                                            <li><a href="{% url 'userauths:sign-out' %}"><i class="fi fi-rs-sign-out mr-10"></i>{% trans 'Sign out' %}</a></li>
+                                            {% else %}
+                                            <li><a href="{% url 'userauths:sign-in' %}"><i class="fi fi-rs-sign-in mr-10"></i>{% trans 'Sign In' %}</a></li>
+                                            {% endif %}
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-bottom header-bottom-bg-color sticky-bar">
+            <div class="container">
+                <div class="header-wrap header-space-between position-relative">
+                    <div class="logo logo-width-1 d-block d-lg-none">
+                        <a href="{% url 'core:index' %}" class="navbar-brand sisi-brand">Sisi Bomboniere</a>
+                    </div>
+                    <div class="header-nav d-none d-lg-flex">
+                        <div class="main-categori-wrap d-none d-lg-block">
+                            <a class="categories-button-active" href="#">
+                                <span class="fi-rs-apps"></span> <span class="et">{% trans 'Browse' %}</span> {% trans 'All Categories' %}
+                                <i class="fi-rs-angle-down"></i>
+                            </a>
+                            <div class="categories-dropdown-wrap categories-dropdown-active-large font-heading">
+                                <div class="d-flex categori-dropdown-inner">
+                                    <ul>
+                                        {% for c in categories %}
+
+                                        <li>
+                                            <a href="{% url 'core:category-product-list' c.cid %}"> <img src="{{ c.image.url }}" alt="" />{{c.title}}</a>
+                                        </li>
+                                        {% endfor %}
+
+                                    </ul>
+
+                                </div>
+
+                                <div class="more_categories"><span class="icon"></span> <span class="heading-sm-1">{% trans 'Show more...' %}</span></div>
+                            </div>
+                        </div>
+                        <div class="main-menu main-menu-padding-1 main-menu-lh-2 d-none d-lg-block font-heading">
+                            <nav>
+                                <ul>
+                                    <li class="hot-deals"><img src="{% static 'assets/imgs/theme/icons/icon-hot.svg' %}" alt="hot deals" /><a href="{% url 'core:product-list' %}">{% trans 'Deals' %}</a></li>
+                                    <li>
+                                        <a class="active" href="{% url 'core:index' %}">{% trans 'Home' %}</a>
+
+                                    </li>
+
+                                    <li>
+                                        <a href="#">{% trans 'Category' %} <i class="fi-rs-angle-down"></i></a>
+                                        <ul class="sub-menu">
+                                            {% for c in categories %}
+                                            <li><a href="{% url 'core:category-product-list' c.cid %}">{{c.title}}</a></li>
+                                            {% endfor %}
+                                            <hr>
+                                            <li><a href="{% url 'core:category-list' %}">{% trans 'All Categories' %}</a></li>
+
+                                        </ul>
+                                    </li>
+
+                                    <li>
+                                        <a href="{% url 'core:product-list'  %}">{% trans 'Shop' %}</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="{% url 'core:vendor-list' %}">{% trans 'Vendors' %} </a>
+
+                                    </li>
+                                    
+                                    <!-- Menu Admin - Visibile solo agli amministratori -->
+                                    {% if request.user.is_superuser or request.user.is_staff %}
+                                    <li class="admin-menu">
+                                        <a href="#" class="text-sisi-primary"><i class="fas fa-cog"></i> {% trans 'Admin' %} <i class="fi-rs-angle-down"></i></a>
+                                        <ul class="sub-menu">
+                                            <li><a href="{% url 'useradmin:dashboard-add-products' %}"><i class="fas fa-plus"></i> Aggiungi Prodotto</a></li>
+                                            <li><a href="{% url 'useradmin:dashboard-products' %}"><i class="fas fa-boxes"></i> Gestisci Prodotti</a></li>
+                                            <li><a href="{% url 'useradmin:dashboard-add-category' %}"><i class="fas fa-plus-circle"></i> Aggiungi Categoria</a></li>
+                                            <li><a href="{% url 'useradmin:dashboard-categories' %}"><i class="fas fa-list"></i> Gestisci Categorie</a></li>
+                                            <hr>
+                                            <li><a href="{% url 'useradmin:orders' %}"><i class="fas fa-shopping-cart"></i> Ordini</a></li>
+                                            <li><a href="{% url 'useradmin:dashboard' %}"><i class="fas fa-chart-bar"></i> Dashboard Magazzino</a></li>
+                                            <hr>
+                                            <li><a href="/admin/" target="_blank"><i class="fas fa-database"></i> Admin Django</a></li>
+                                        </ul>
+                                    </li>
+                                    {% endif %}
+                                    <li class="position-static">
+                                        <a href="#">{% trans 'Mega menu' %} <i class="fi-rs-angle-down"></i></a>
+                                        <ul class="mega-menu">
+                                            <li class="sub-mega-menu sub-mega-menu-width-22">
+                                                <a class="menu-title" href="#">Matrimonio</a>
+                                                <ul>
+                                                    <li><a href="{% url 'core:category-product-list' 'catg4fahdcfbe' %}">Bomboniere Cristallo</a></li>
+                                                    <li><a href="#">Portafoto Eleganti</a></li>
+                                                    <li><a href="#">Bomboniere Argento</a></li>
+                                                    <li><a href="#">Confettate Premium</a></li>
+                                                    <li><a href="#">Bomboniere Personalizzate</a></li>
+                                                    <li><a href="#">Segnaposti Romantici</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="sub-mega-menu sub-mega-menu-width-22">
+                                                <a class="menu-title" href="#">Battesimo & Comunione</a>
+                                                <ul>
+                                                    <li><a href="{% url 'core:category-product-list' 'catfg1a34h34b' %}">Angioletti Ceramica</a></li>
+                                                    <li><a href="#">Icone Religiose</a></li>
+                                                    <li><a href="#">Portarosario</a></li>
+                                                    <li><a href="#">Bomboniere Azzurre</a></li>
+                                                    <li><a href="#">Bomboniere Rosa</a></li>
+                                                    <li><a href="#">Carillon Musicali</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="sub-mega-menu sub-mega-menu-width-22">
+                                                <a class="menu-title" href="#">Occasioni Speciali</a>
+                                                <ul>
+                                                    <li><a href="{% url 'core:category-product-list' 'cath1dbgadag5' %}">Laurea</a></li>
+                                                    <li><a href="#">Compleanno</a></li>
+                                                    <li><a href="#">Anniversario</a></li>
+                                                    <li><a href="#">Nascita</a></li>
+                                                    <li><a href="#">Bomboniere Solidali</a></li>
+                                                    <li><a href="#">Collezione Esclusiva</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="sub-mega-menu sub-mega-menu-width-34">
+                                                <div class="menu-banner-wrap">
+                                                    <a href="{% url 'core:product-list' %}"><img src="{% static 'assets/imgs/banner/banner-menu.png' %}" alt="Sisi Bomboniere" /></a>
+                                                    <div class="menu-banner-content">
+                                                        <h4>Offerte speciali</h4>
+                                                        <h3>
+                                                            Non perdere<br />le nostre novità
+                                                        </h3>
+                                                        <div class="menu-banner-price">
+                                                            <span class="new-price text-sisi-primary">Spedizione gratuita sopra €50</span>
+                                                        </div>
+                                                        <div class="menu-banner-btn">
+                                                            <a href="{% url 'core:product-list' %}">Scopri ora</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="menu-banner-discount">
+                                                        <h3>
+                                                            <span>🎀</span> Sisi
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a>Blog</a>
+
+                                    </li>
+                                    <li>
+                                        <a href="#">Pages <i class="fi-rs-angle-down"></i></a>
+                                        <ul class="sub-menu">
+                                            <li><a href="{% url 'core:about_us' %}">About Us</a></li>
+                                            <li><a href="{% url 'core:contact' %}">Contact</a></li>
+                                            <li><a href="{% url 'core:dashboard' %}">My Dashboard</a></li>
+                                            <li><a href="{% url 'core:purchase_guide' %}">Purchase Guide</a></li>
+                                            <li><a href="{% url 'core:privacy_policy' %}">Privacy Policy</a></li>
+                                            <li><a href="{% url 'core:terms_of_service' %}">Terms of Service</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="{% url 'core:contact' %}">Contact</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="hotline d-none d-lg-flex">
+                        <img src="{% static 'assets/imgs/theme/icons/icon-headphone.svg' %}" alt="hotline" />
+                        <p>+39 06 1234567<span>Centro Assistenza Sisi</span></p>
+                    </div>
+                    <div class="header-action-icon-2 d-block d-lg-none">
+                        <div class="burger-icon burger-icon-white">
+                            <span class="burger-icon-top"></span>
+                            <span class="burger-icon-mid"></span>
+                            <span class="burger-icon-bottom"></span>
+                        </div>
+                    </div>
+                    <div class="header-action-right d-block d-lg-none">
+                        <div class="header-action-2">
+                            <div class="header-action-icon-2">
+                                <a href="{% url 'core:wishlist' %}">
+                                    <img alt="E-commerce" src="{% static 'assets/imgs/theme/icons/icon-heart.svg' %}" />
+                                    {% if request.user.is_authenticated %}
+                                    <span class="pro-count blue">{{ wishlist.count }}</span>
+                                    {% else %}
+                                    <span class="pro-count blue">0</span>
+                                    {% endif %}
+                                </a>
+                            </div>
+                            <div class="header-action-icon-2">
+                                <a class="mini-cart-icon" href="{% url 'core:cart' %}">
+                                    <img alt="E-commerce" src="{% static 'assets/imgs/theme/icons/icon-cart.svg' %}" />
+                                    <span class="pro-count white cart-items-count">{{ request.session.cart_data_obj|length }}</span>
+                                </a>
+                                <div class="cart-dropdown-wrap cart-dropdown-hm2">
+
+                                    <div class="shopping-cart-footer">
+                                        <div class="shopping-cart-button">
+                                            <a href="{% url 'core:cart' %}">View cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="alert alert-{{message.tags}}">
+                            <strong>{{ message }}</strong>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+                <script>
+                    setTimeout (() => {
+                        $(".alert").alert("close");
+                    }, 3000)
+                </script>
+            </div>
+        </div>
+    </header>
+    <div class="mobile-header-active mobile-header-wrapper-style">
+        <div class="mobile-header-wrapper-inner">
+            <div class="mobile-header-top">
+                <div class="mobile-header-logo">
+                    <a href="/" class="navbar-brand sisi-brand">Sisi Bomboniere</a>
+                </div>
+                <div class="mobile-menu-close close-style-wrap close-style-position-inherit">
+                    <button class="close-style search-close">
+                        <i class="icon-top"></i>
+                        <i class="icon-bottom"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="mobile-header-content-area">
+                <div class="mobile-search search-style-3 mobile-header-border">
+                    <form action="#">
+                        <input type="text" placeholder="Search for items…" />
+                        <button type="submit"><i class="fi-rs-search"></i></button>
+                    </form>
+                </div>
+                <div class="mobile-menu-wrap mobile-header-border">
+                    <!-- mobile menu start -->
+                    <nav>
+                        <ul class="mobile-menu font-heading">
+                            <li class="menu-item-has-children">
+                                <a href="/">Home</a>
+                                
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="#">shop</a>
+                                
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="#">Vendors</a>
+                            </li>
+                           
+                            <!-- Menu Admin Mobile -->
+                            {% if request.user.is_superuser or request.user.is_staff %}
+                            <li class="menu-item-has-children">
+                                <a href="#" style="color: var(--sisi-primary); font-weight: 600;"><i class="fas fa-cog"></i> Admin</a>
+                                <ul class="dropdown">
+                                    <li><a href="{% url 'useradmin:dashboard-add-products' %}"><i class="fas fa-plus"></i> Aggiungi Prodotto</a></li>
+                                    <li><a href="{% url 'useradmin:dashboard-products' %}"><i class="fas fa-boxes"></i> Gestisci Prodotti</a></li>
+                                    <li><a href="{% url 'useradmin:dashboard-add-category' %}"><i class="fas fa-plus-circle"></i> Aggiungi Categoria</a></li>
+                                    <li><a href="{% url 'useradmin:dashboard-categories' %}"><i class="fas fa-list"></i> Gestisci Categorie</a></li>
+                                    <li><a href="{% url 'useradmin:orders' %}"><i class="fas fa-shopping-cart"></i> Ordini</a></li>
+                                    <li><a href="{% url 'useradmin:dashboard' %}"><i class="fas fa-chart-bar"></i> Dashboard</a></li>
+                                    <li><a href="/admin/" target="_blank"><i class="fas fa-database"></i> Admin Django</a></li>
+                                </ul>
+                            </li>
+                            {% endif %}
+                            
+                            <li class="menu-item-has-children">
+                                <a href="#">Pages</a>
+                                <ul class="dropdown">
+                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                    <li><a href="#">My Account</a></li>
+                                    <li><a href="#">Login</a></li>
+                                    <li><a href="#">Register</a></li>
+                                    <li><a href="#">Forgot password</a></li>
+                                    <li><a href="#">Reset password</a></li>
+                                    <li><a href="#">Purchase Guide</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="#">Terms of Service</a></li>
+                                    <li><a href="#">404 Page</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="#">Language</a>
+                                <ul class="dropdown">
+                                    <li><a href="#">English</a></li>
+                                    <li><a href="#">French</a></li>
+                                    <li><a href="#">German</a></li>
+                                    <li><a href="#">Spanish</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- mobile menu end -->
+                </div>
+                <div class="mobile-header-info-wrap">
+                    <div class="single-mobile-header-info">
+                        <a href="#"><i class="fi-rs-marker"></i> Our location </a>
+                    </div>
+                    <div class="single-mobile-header-info">
+                        <a href="#"><i class="fi-rs-user"></i>Log In / Sign Up </a>
+                    </div>
+                    <div class="single-mobile-header-info">
+                        <a href="#"><i class="fi-rs-headphones"></i>(+01) - 2345 - 6789 </a>
+                    </div>
+                </div>
+                <div class="mobile-social-icon mb-50">
+                    <h6 class="mb-15">Follow Us</h6>
+                    <a href="#"><img src="{% static 'assets/imgs/theme/icons/icon-facebook-white.svg' %}" alt="" /></a>
+                    <a href="#"><img src="{% static 'assets/imgs/theme/icons/icon-twitter-white.svg' %}" alt="" /></a>
+                    <a href="#"><img src="{% static 'assets/imgs/theme/icons/icon-instagram-white.svg' %}" alt="" /></a>
+                    <a href="#"><img src="{% static 'assets/imgs/theme/icons/icon-pinterest-white.svg' %}" alt="" /></a>
+                    <a href="#"><img src="{% static 'assets/imgs/theme/icons/icon-youtube-white.svg' %}" alt="" /></a>
+                </div>
+                <div class="site-copyright">Copyright 2019 - Present © Desphixs. All rights reserved. Powered by Desphixs.</div>
+            </div>
+        </div>
+    </div>
+    <!--End header-->
+
+    {% block content %}
+
+
+
+    {% endblock content %}
+
+
+
+    <footer class="main">
+        <section class="newsletter mb-15">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="position-relative newsletter-inner">
+                            <div class="newsletter-content">
+                                <h2 class="mb-20 text-sisi-dark" style="font-family: 'Dancing Script', cursive;">
+                                    Rimani aggiornato sulle<br />nostre novità!
+                                </h2>
+                                <p class="mb-45">Ricevi le ultime collezioni e offerte speciali da <span class="text-sisi-primary">Sisi Bomboniere</span></p>
+                                <form class="form-subcriber d-flex">
+                                    <input type="email" placeholder="La tua email" />
+                                    <button class="btn btn-primary" type="submit">Iscriviti</button>
+                                </form>
+                            </div>
+                            <img src="{% static 'assets/imgs/banner/banner-9.png' %}" alt="newsletter" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="featured section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-1-5 col-md-4 col-12 col-sm-6 mb-md-4 mb-xl-0">
+                        <div class="banner-left-icon d-flex align-items-center wow fadeIn animated">
+                            <div class="banner-icon">
+                                <img src="{% static 'assets/imgs/theme/icons/icon-1.svg' %}" alt="" />
+                            </div>
+                            <div class="banner-text">
+                                <h3 class="icon-box-title">Best prices & offers</h3>
+                                <p>Orders $50 or more</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                        <div class="banner-left-icon d-flex align-items-center wow fadeIn animated">
+                            <div class="banner-icon">
+                                <img src="{% static 'assets/imgs/theme/icons/icon-2.svg' %}" alt="" />
+                            </div>
+                            <div class="banner-text">
+                                <h3 class="icon-box-title">Free delivery</h3>
+                                <p>24/7 amazing services</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                        <div class="banner-left-icon d-flex align-items-center wow fadeIn animated">
+                            <div class="banner-icon">
+                                <img src="{% static 'assets/imgs/theme/icons/icon-3.svg' %}" alt="" />
+                            </div>
+                            <div class="banner-text">
+                                <h3 class="icon-box-title">Great daily deal</h3>
+                                <p>When you sign up</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                        <div class="banner-left-icon d-flex align-items-center wow fadeIn animated">
+                            <div class="banner-icon">
+                                <img src="{% static 'assets/imgs/theme/icons/icon-4.svg' %}" alt="" />
+                            </div>
+                            <div class="banner-text">
+                                <h3 class="icon-box-title">Wide assortment</h3>
+                                <p>Mega Discounts</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                        <div class="banner-left-icon d-flex align-items-center wow fadeIn animated">
+                            <div class="banner-icon">
+                                <img src="{% static 'assets/imgs/theme/icons/icon-5.svg' %}" alt="" />
+                            </div>
+                            <div class="banner-text">
+                                <h3 class="icon-box-title">Easy returns</h3>
+                                <p>Within 30 days</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-1-5 col-md-4 col-12 col-sm-6 d-xl-none">
+                        <div class="banner-left-icon d-flex align-items-center wow fadeIn animated">
+                            <div class="banner-icon">
+                                <img src="{% static 'assets/imgs/theme/icons/icon-6.svg' %}" alt="" />
+                            </div>
+                            <div class="banner-text">
+                                <h3 class="icon-box-title">Safe delivery</h3>
+                                <p>Within 30 days</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-padding footer-mid">
+            <div class="container pt-15 pb-20">
+                <div class="row">
+                    <div class="col">
+                        <div class="widget-about font-md mb-md-3 mb-lg-3 mb-xl-0">
+                            <div class="logo mb-30">
+                                <a href="/" class="mb-15 navbar-brand sisi-brand" style="font-size: 2rem;">Sisi Bomboniere</a>
+                                <p class="font-lg text-heading">Specialisti in bomboniere eleganti per ogni occasione speciale</p>
+                            </div>
+                            <ul class="contact-infor">
+                                <li><img src="{% static 'assets/imgs/theme/icons/icon-location.svg' %}" alt="" /><strong>Indirizzo: </strong> <span>Via Roma 123, 00100 Roma, Italia</span></li>
+                                <li><img src="{% static 'assets/imgs/theme/icons/icon-contact.svg' %}" alt="" /><strong>Chiamaci:</strong><span>+39 06 1234567</span></li>
+                                <li><img src="{% static 'assets/imgs/theme/icons/icon-email-2.svg' %}" alt="" /><strong>Email:</strong><span>info@sisibomboniere.com</span></li>
+                                <li><img src="{% static 'assets/imgs/theme/icons/icon-clock.svg' %}" alt="" /><strong>Orari:</strong><span>9:00 - 19:00, Lun - Sab</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-link-widget col">
+                        <h4 class="widget-title">Azienda</h4>
+                        <ul class="footer-list mb-sm-5 mb-md-0">
+                            <li><a href="{% url 'core:about_us' %}">Chi siamo</a></li>
+                            <li><a href="{% url 'core:contact' %}">Informazioni spedizioni</a></li>
+                            <li><a href="{% url 'core:privacy_policy' %}">Privacy Policy</a></li>
+                            <li><a href="{% url 'core:terms_of_service' %}">Termini e condizioni</a></li>
+                            <li><a href="{% url 'core:contact' %}">Contattaci</a></li>
+                            <li><a href="{% url 'core:contact' %}">Centro assistenza</a></li>
+                            <li><a href="{% url 'core:about_us' %}">La nostra storia</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-link-widget col">
+                        <h4 class="widget-title">Account</h4>
+                        <ul class="footer-list mb-sm-5 mb-md-0">
+                            <li><a href="{% url 'userauths:sign-in' %}">Accedi</a></li>
+                            <li><a href="{% url 'core:cart' %}">Visualizza carrello</a></li>
+                            <li><a href="{% url 'core:wishlist' %}">Lista desideri</a></li>
+                            <li><a href="{% url 'core:dashboard' %}">Traccia ordini</a></li>
+                            <li><a href="{% url 'core:contact' %}">Richiedi assistenza</a></li>
+                            <li><a href="{% url 'core:dashboard' %}">Dettagli spedizioni</a></li>
+                            <li><a href="{% url 'core:product-list' %}">Confronta prodotti</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-link-widget col">
+                        <h4 class="widget-title">Servizi</h4>
+                        <ul class="footer-list mb-sm-5 mb-md-0">
+                            <li><a href="{% url 'core:contact' %}">Personalizzazioni</a></li>
+                            <li><a href="{% url 'core:contact' %}">Incisioni custom</a></li>
+                            <li><a href="{% url 'core:contact' %}">Confezionamento regalo</a></li>
+                            <li><a href="{% url 'core:contact' %}">Consegna express</a></li>
+                            <li><a href="{% url 'core:contact' %}">Consulenza occasioni</a></li>
+                            <li><a href="{% url 'core:about_us' %}">Garanzia qualità</a></li>
+                            <li><a href="{% url 'core:contact' %}">Promozioni</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-link-widget col">
+                        <h4 class="widget-title">Popolari</h4>
+                        <ul class="footer-list mb-sm-5 mb-md-0">
+                            <li><a href="{% url 'core:category-product-list' 'catg4fahdcfbe' %}">Bomboniere matrimonio</a></li>
+                            <li><a href="{% url 'core:category-product-list' 'catfg1a34h34b' %}">Bomboniere battesimo</a></li>
+                            <li><a href="{% url 'core:category-product-list' 'cat5gfeg4b33c' %}">Prima comunione</a></li>
+                            <li><a href="{% url 'core:category-product-list' 'cat5bdb2g5aeh' %}">Bomboniere cresima</a></li>
+                            <li><a href="{% url 'core:category-product-list' 'cath1dbgadag5' %}">Bomboniere laurea</a></li>
+                            <li><a href="{% url 'core:product-list' %}">Cristallo elegante</a></li>
+                            <li><a href="{% url 'core:product-list' %}">Argento pregiato</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-link-widget widget-install-app col">
+                        <h4 class="widget-title">Seguici sui Social</h4>
+                        <p class="wow fadeIn animated">Resta aggiornato sulle nostre novità</p>
+                        <div class="mobile-social-icon mb-20">
+                            <a href="#" class="text-sisi-primary"><i class="fab fa-facebook-f fa-2x mr-3"></i></a>
+                            <a href="#" class="text-sisi-primary"><i class="fab fa-instagram fa-2x mr-3"></i></a>
+                            <a href="#" class="text-sisi-primary"><i class="fab fa-pinterest fa-2x mr-3"></i></a>
+                            <a href="#" class="text-sisi-primary"><i class="fab fa-whatsapp fa-2x"></i></a>
+                        </div>
+                        <p class="mb-20">Pagamenti Sicuri</p>
+                        <img class="wow fadeIn animated" src="{% static 'assets/imgs/theme/payment-method.png' %}" alt="Pagamenti sicuri Sisi Bomboniere" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="container pb-30">
+            <div class="row align-items-center">
+                <div class="col-12 mb-30">
+                    <div class="footer-bottom"></div>
+                </div>
+                <div class="col-xl-4 col-lg-6 col-md-6">
+                    <p class="font-sm mb-0">&copy; 2025, <strong class="text-sisi-primary">Sisi Bomboniere</strong> - Specialisti in Bomboniere Eleganti <br />Tutti i diritti riservati</p>
+                </div>
+                <div class="col-xl-4 col-lg-6 text-center d-none d-xl-block">
+                    <div class="hotline d-lg-inline-flex mr-30">
+                        <img src="{% static 'assets/imgs/theme/icons/phone-call.svg' %}" alt="hotline" />
+                        <p>+39 06 1234567<span>Lun-Sab 9:00-19:00</span></p>
+                    </div>
+                    <div class="hotline d-lg-inline-flex">
+                        <img src="{% static 'assets/imgs/theme/icons/phone-call.svg' %}" alt="hotline" />
+                        <p>+39 340 1234567<span>Centro Assistenza</span></p>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 col-md-6 text-end d-none d-md-block">
+                    <div class="mobile-social-icon">
+                        <h6>Seguici</h6>
+                        <a href="#"><img src="{% static 'assets/imgs/theme/icons/icon-facebook-white.svg' %}" alt="Facebook Sisi Bomboniere" /></a>
+                        <a href="#"><img src="{% static 'assets/imgs/theme/icons/icon-twitter-white.svg' %}" alt="Twitter Sisi Bomboniere" /></a>
+                        <a href="#"><img src="{% static 'assets/imgs/theme/icons/icon-instagram-white.svg' %}" alt="Instagram Sisi Bomboniere" /></a>
+                        <a href="#"><img src="{% static 'assets/imgs/theme/icons/icon-pinterest-white.svg' %}" alt="Pinterest Sisi Bomboniere" /></a>
+                        <a href="#"><img src="{% static 'assets/imgs/theme/icons/icon-youtube-white.svg' %}" alt="YouTube Sisi Bomboniere" /></a>
+                    </div>
+                    <p class="font-sm">Spedizione gratuita sopra €50 per il tuo primo ordine</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Preloader Start -->
+    <!-- <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="text-center">
+                    <img src="{% static '{% static ' %}'assets/imgs/theme/loading.gif' %}" alt="" />
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Vendor JS-->
+    <script data-cfasync="false" src="{% static '/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js' %}"></script>
+    <script src="{% static 'assets/js/vendor/modernizr-3.6.0.min.js' %}"></script>
+    <script src="{% static 'assets/js/vendor/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'assets/js/vendor/jquery-migrate-3.3.0.min.js' %}"></script>
+    <script src="{% static 'assets/js/vendor/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/slick.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/jquery.syotimer.min.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/wow.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/slider-range.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/perfect-scrollbar.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/magnific-popup.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/select2.min.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/waypoints.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/counterup.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/jquery.countdown.min.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/images-loaded.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/isotope.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/scrollup.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/jquery.vticker-min.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/jquery.theia.sticky.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/jquery.elevatezoom.js' %}"></script>
+    <!-- Template  JS -->
+    <script src="{% static 'assets/js/main.js' %}"></script>
+    <script src="{% static 'assets/js/shop.js' %}"></script>
+    <script src="{% static 'assets/js/function.js' %}"></script>
+</body>
+
+</html>

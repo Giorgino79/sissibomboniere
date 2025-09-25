@@ -1,0 +1,44 @@
+{% extends 'useradmin/base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="content-main">
+    <div class="row">
+        <div class="col-9">
+            <div class="content-header">
+                <h2 class="content-title">Aggiungi Nuova Categoria</h2>
+                <div>
+                    <a href="{% url 'useradmin:dashboard-categories' %}" class="btn btn-light rounded font-sm mr-5 text-body hover-up">Elimina</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h4>Informazioni sulla Categoria</h4>
+                </div>
+                <div class="card-body">
+                    <form action="{% url 'useradmin:dashboard-add-category' %}" method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        
+                        <div class="mb-4">
+                            <label for="title" class="form-label">Titolo *</label>
+                            {{form.title}}
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label class="form-label">Immagine Categoria *</label>
+                            {{form.image}}
+                        </div>
+                        
+                        <div class="d-grid">
+                            <button class="btn btn-primary">Crea Categoria</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

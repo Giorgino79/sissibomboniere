@@ -1,0 +1,452 @@
+# SISI BOMBONIERE - TRADUZIONI ITALIANE
+# Copyright (C) 2025 Sisi Bomboniere
+# This file is distributed under the same license as the Sisi Bomboniere package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Sisi Bomboniere 1.0\n"
+"Report-Msgid-Bugs-To: info@sisibomboniere.com\n"
+"POT-Creation-Date: 2025-09-25 12:00+0100\n"
+"PO-Revision-Date: 2025-09-25 12:00+0100\n"
+"Last-Translator: Sisi Bomboniere <info@sisibomboniere.com>\n"
+"Language-Team: Italian <it@li.org>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# Header navigation
+msgid "About Us"
+msgstr "Chi siamo"
+
+msgid "My Account"
+msgstr "Il mio account"
+
+msgid "Wishlist"
+msgstr "Lista desideri"
+
+msgid "Order Tracking"
+msgstr "Tracciamento ordini"
+
+msgid "Need help? Call Us:"
+msgstr "Hai bisogno di aiuto? Chiamaci:"
+
+msgid "All Categories"
+msgstr "Tutte le categorie"
+
+msgid "Search for items..."
+msgstr "Cerca bomboniere..."
+
+msgid "Browse"
+msgstr "Sfoglia"
+
+msgid "Show more..."
+msgstr "Mostra altro..."
+
+msgid "Home"
+msgstr "Home"
+
+msgid "Category"
+msgstr "Categoria"
+
+msgid "Shop"
+msgstr "Negozio"
+
+msgid "Vendors"
+msgstr "Fornitori"
+
+msgid "Admin"
+msgstr "Amministratore"
+
+msgid "Mega menu"
+msgstr "Menu completo"
+
+msgid "Deals"
+msgstr "Offerte"
+
+msgid "Cart"
+msgstr "Carrello"
+
+msgid "View cart"
+msgstr "Visualizza carrello"
+
+msgid "Account"
+msgstr "Account"
+
+msgid "Setting"
+msgstr "Impostazioni"
+
+msgid "Sign out"
+msgstr "Disconnetti"
+
+msgid "Sign In"
+msgstr "Accedi"
+
+msgid "Contact"
+msgstr "Contatti"
+
+# Footer
+msgid "Stay home & get your daily needs from our shop"
+msgstr "Rimani a casa e soddisfa le tue esigenze dal nostro negozio"
+
+msgid "Subscribe"
+msgstr "Iscriviti"
+
+msgid "Your email address"
+msgstr "Il tuo indirizzo email"
+
+# Product pages
+msgid "Popular Products"
+msgstr "Prodotti popolari"
+
+msgid "Featured Products"
+msgstr "Prodotti in evidenza"
+
+msgid "Best Sellers"
+msgstr "Più venduti"
+
+msgid "New Products"
+msgstr "Nuovi prodotti"
+
+msgid "Add to Cart"
+msgstr "Aggiungi al carrello"
+
+msgid "Add to Wishlist"
+msgstr "Aggiungi alla lista desideri"
+
+msgid "Quick View"
+msgstr "Anteprima veloce"
+
+msgid "Compare"
+msgstr "Confronta"
+
+msgid "In Stock"
+msgstr "Disponibile"
+
+msgid "Out of Stock"
+msgstr "Esaurito"
+
+msgid "Product Details"
+msgstr "Dettagli prodotto"
+
+msgid "Reviews"
+msgstr "Recensioni"
+
+msgid "Specifications"
+msgstr "Specifiche"
+
+# Categories specific for bomboniere
+msgid "Wedding Favors"
+msgstr "Bomboniere matrimonio"
+
+msgid "Baptism Favors"
+msgstr "Bomboniere battesimo"
+
+msgid "Communion Favors"
+msgstr "Bomboniere comunione"
+
+msgid "Confirmation Favors"
+msgstr "Bomboniere cresima"
+
+msgid "Graduation Favors"
+msgstr "Bomboniere laurea"
+
+msgid "Birthday Favors"
+msgstr "Bomboniere compleanno"
+
+msgid "Religious Favors"
+msgstr "Bomboniere religiose"
+
+# Currency and pricing
+msgid "USD"
+msgstr "EUR"
+
+msgid "Price"
+msgstr "Prezzo"
+
+msgid "Total"
+msgstr "Totale"
+
+msgid "Subtotal"
+msgstr "Subtotale"
+
+msgid "Shipping"
+msgstr "Spedizione"
+
+msgid "Tax"
+msgstr "Tasse"
+
+msgid "Discount"
+msgstr "Sconto"
+
+msgid "Free Shipping"
+msgstr "Spedizione gratuita"
+
+# Checkout and orders
+msgid "Checkout"
+msgstr "Checkout"
+
+msgid "Place Order"
+msgstr "Effettua ordine"
+
+msgid "Order Summary"
+msgstr "Riepilogo ordine"
+
+msgid "Billing Details"
+msgstr "Dettagli fatturazione"
+
+msgid "Shipping Details"
+msgstr "Dettagli spedizione"
+
+msgid "Payment Method"
+msgstr "Metodo di pagamento"
+
+msgid "Credit Card"
+msgstr "Carta di credito"
+
+msgid "PayPal"
+msgstr "PayPal"
+
+msgid "Bank Transfer"
+msgstr "Bonifico bancario"
+
+msgid "Cash on Delivery"
+msgstr "Contrassegno"
+
+# User account
+msgid "Login"
+msgstr "Accedi"
+
+msgid "Register"
+msgstr "Registrati"
+
+msgid "Logout"
+msgstr "Disconnetti"
+
+msgid "Dashboard"
+msgstr "Dashboard"
+
+msgid "Profile"
+msgstr "Profilo"
+
+msgid "Orders"
+msgstr "Ordini"
+
+msgid "Order History"
+msgstr "Storico ordini"
+
+msgid "Change Password"
+msgstr "Cambia password"
+
+msgid "Update Profile"
+msgstr "Aggiorna profilo"
+
+# Search and filters
+msgid "Search Results"
+msgstr "Risultati ricerca"
+
+msgid "Filter by"
+msgstr "Filtra per"
+
+msgid "Sort by"
+msgstr "Ordina per"
+
+msgid "Price: Low to High"
+msgstr "Prezzo: dal più basso"
+
+msgid "Price: High to Low"
+msgstr "Prezzo: dal più alto"
+
+msgid "Newest First"
+msgstr "Prima i più recenti"
+
+msgid "Best Rating"
+msgstr "Migliori recensioni"
+
+msgid "Most Popular"
+msgstr "Più popolari"
+
+# Messages and notifications
+msgid "Added to cart successfully"
+msgstr "Aggiunto al carrello con successo"
+
+msgid "Removed from cart"
+msgstr "Rimosso dal carrello"
+
+msgid "Added to wishlist"
+msgstr "Aggiunto alla lista desideri"
+
+msgid "Order placed successfully"
+msgstr "Ordine effettuato con successo"
+
+msgid "Profile updated successfully"
+msgstr "Profilo aggiornato con successo"
+
+msgid "Password changed successfully"
+msgstr "Password cambiata con successo"
+
+# Admin specific translations
+msgid "Add Product"
+msgstr "Aggiungi prodotto"
+
+msgid "Edit Product"
+msgstr "Modifica prodotto"
+
+msgid "Delete Product"
+msgstr "Elimina prodotto"
+
+msgid "Product Management"
+msgstr "Gestione prodotti"
+
+msgid "Category Management"
+msgstr "Gestione categorie"
+
+msgid "Order Management"
+msgstr "Gestione ordini"
+
+msgid "Customer Management"
+msgstr "Gestione clienti"
+
+msgid "Inventory Management"
+msgstr "Gestione magazzino"
+
+msgid "Sales Report"
+msgstr "Report vendite"
+
+msgid "Stock Level"
+msgstr "Livello scorte"
+
+msgid "Low Stock"
+msgstr "Scorte basse"
+
+msgid "Out of Stock"
+msgstr "Esaurito"
+
+# Bomboniere specific terms
+msgid "Elegant favors for every special occasion"
+msgstr "Bomboniere eleganti per ogni occasione speciale"
+
+msgid "Wedding"
+msgstr "Matrimonio"
+
+msgid "Baptism"
+msgstr "Battesimo"
+
+msgid "First Communion"
+msgstr "Prima comunione"
+
+msgid "Confirmation"
+msgstr "Cresima"
+
+msgid "Graduation"
+msgstr "Laurea"
+
+msgid "Anniversary"
+msgstr "Anniversario"
+
+msgid "Birthday"
+msgstr "Compleanno"
+
+msgid "Birth"
+msgstr "Nascita"
+
+msgid "Religious"
+msgstr "Religiose"
+
+msgid "Charity"
+msgstr "Solidali"
+
+msgid "Personalization"
+msgstr "Personalizzazione"
+
+msgid "Custom engraving"
+msgstr "Incisione personalizzata"
+
+msgid "Gift wrapping"
+msgstr "Confezione regalo"
+
+msgid "Delivery time"
+msgstr "Tempi di consegna"
+
+# Business hours and contact
+msgid "Business Hours"
+msgstr "Orari di apertura"
+
+msgid "Monday to Saturday"
+msgstr "Lunedì - Sabato"
+
+msgid "9:00 AM - 7:00 PM"
+msgstr "9:00 - 19:00"
+
+msgid "Sunday"
+msgstr "Domenica"
+
+msgid "Closed"
+msgstr "Chiuso"
+
+msgid "Call us"
+msgstr "Chiamaci"
+
+msgid "Email us"
+msgstr "Scrivici"
+
+msgid "Visit our store"
+msgstr "Visita il nostro negozio"
+
+# Quality and service
+msgid "High Quality Materials"
+msgstr "Materiali di alta qualità"
+
+msgid "Fast Delivery"
+msgstr "Consegna veloce"
+
+msgid "Secure Payment"
+msgstr "Pagamento sicuro"
+
+msgid "Customer Service"
+msgstr "Servizio clienti"
+
+msgid "Satisfaction Guaranteed"
+msgstr "Soddisfazione garantita"
+
+msgid "30-Day Return Policy"
+msgstr "Reso entro 30 giorni"
+
+# Shipping to Italy
+msgid "Free shipping over €50"
+msgstr "Spedizione gratuita sopra i 50€"
+
+msgid "Standard delivery 3-5 days"
+msgstr "Consegna standard 3-5 giorni"
+
+msgid "Express delivery 24-48 hours"
+msgstr "Consegna express 24-48 ore"
+
+msgid "Sicily and Sardinia"
+msgstr "Sicilia e Sardegna"
+
+msgid "Islands delivery 4-7 days"
+msgstr "Consegna isole 4-7 giorni"
+
+# Newsletter and social
+msgid "Newsletter Signup"
+msgstr "Iscriviti alla newsletter"
+
+msgid "Get updates on new collections"
+msgstr "Ricevi aggiornamenti sulle nuove collezioni"
+
+msgid "Follow Us"
+msgstr "Seguici"
+
+msgid "Facebook"
+msgstr "Facebook"
+
+msgid "Instagram"
+msgstr "Instagram"
+
+msgid "Pinterest"
+msgstr "Pinterest"
+
+msgid "YouTube"
+msgstr "YouTube"

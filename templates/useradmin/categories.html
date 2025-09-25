@@ -1,0 +1,57 @@
+{% extends 'useradmin/base.html' %}
+{% load static %}
+{% load humanize %}
+{% block content %}
+
+<section class="content-main">
+    <div class="content-header">
+        <div>
+            <h2 class="content-title card-title">Lista Categorie</h2>
+            <p>Gestisci le Categorie</p>
+        </div>
+        <div>
+            <a href="{% url 'useradmin:dashboard-add-category' %}" class="btn btn-primary btn-sm rounded">Crea Categoria</a>
+        </div>
+    </div>
+    <div class="card mb-4">
+        <header class="card-header">
+            <div class="row align-items-center">
+                <div class="col-md-2 col-6">
+                    <select class="form-select">
+                        <option selected>Status</option>
+                        <option>Active</option>
+                        <option>Disabled</option>
+                        <option>Show all</option>
+                    </select>
+                </div>
+            </div>
+        </header>
+        <div class="card-body">
+            {% for c in all_categories %}
+            <article class="itemlist">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 col-sm-4 col-8 flex-grow-1 col-name">
+                        <a class="itemside" href="{% url 'core:category-product-list' c.cid %}">
+                            <div class="left">
+                                <img src="{{c.image.url}}" style="width: 100px; height: 100px; object-fit: cover; border-radius: 15px;" class="img-sm img-thumbnail" alt="Item" />
+                            </div>
+                            <div class="info">
+                                <h6 class="mb-0">{{c.title}}</h6>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-sm-2 col-4 col-price"><span>{{c.product_count}} Prodotti</span></div>
+                    <div class="col-lg-2 col-sm-2 col-4 col-status"><span class="badge alert-success">Attiva</span></div>
+                    <div class="col-lg-1 col-sm-2 col-4 col-date"><span>{{c.cid}}</span></div>
+                    <div class="col-lg-2 col-sm-2 col-4 col-action text-end">
+                        <a href="{% url 'useradmin:dashboard-edit-category' c.cid %}" class="btn btn-sm font-sm rounded btn-brand"> <i class="material-icons md-edit"></i> Aggiorna </a>
+                        <a href="{% url 'useradmin:dashboard-delete-category' c.cid %}" class="btn btn-sm font-sm btn-light rounded"> <i class="material-icons md-delete_forever"></i> Elimina </a>
+                    </div>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

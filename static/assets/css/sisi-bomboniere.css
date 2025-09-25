@@ -1,0 +1,374 @@
+/* 
+ * SISI BOMBONIERE - CSS PERSONALIZZATO
+ * Colori: Bianco #FAFAFA e Rosa #FFC0CB 
+ * Stile elegante per bomboniere
+ */
+
+:root {
+    --sisi-primary: #FFC0CB;      /* Rosa elegante */
+    --sisi-secondary: #FAFAFA;    /* Bianco sporco */
+    --sisi-accent: #FF69B4;       /* Rosa intenso */
+    --sisi-dark: #8B4B8C;         /* Rosa scuro */
+    --sisi-light: #FFE4E6;        /* Rosa tenue */
+    --sisi-text-dark: #333333;    /* Testo scuro */
+    --sisi-gold: #D4AF37;         /* Oro elegante per dettagli */
+}
+
+/* === HEADER & NAVBAR === */
+.navbar-brand {
+    color: var(--sisi-primary) !important;
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.2rem !important;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(255, 192, 203, 0.3);
+}
+
+.navbar {
+    background: linear-gradient(135deg, var(--sisi-secondary) 0%, var(--sisi-light) 100%) !important;
+    border-bottom: 3px solid var(--sisi-primary);
+    box-shadow: 0 4px 8px rgba(255, 192, 203, 0.2);
+}
+
+.navbar-nav .nav-link {
+    color: var(--sisi-text-dark) !important;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--sisi-primary) !important;
+    transform: translateY(-2px);
+}
+
+/* === BUTTONS === */
+.btn-primary {
+    background: linear-gradient(135deg, var(--sisi-primary) 0%, var(--sisi-accent) 100%);
+    border-color: var(--sisi-primary);
+    color: #ffffff;
+    font-weight: 500;
+    border-radius: 25px;
+    padding: 12px 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 192, 203, 0.3);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, var(--sisi-accent) 0%, var(--sisi-dark) 100%);
+    border-color: var(--sisi-accent);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 192, 203, 0.4);
+}
+
+.btn-outline-primary {
+    border: 2px solid var(--sisi-primary);
+    color: var(--sisi-primary);
+    background: transparent;
+    font-weight: 500;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    background: var(--sisi-primary);
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* === CARDS & PRODUCT CARDS === */
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(255, 192, 203, 0.2);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    background: var(--sisi-secondary);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(255, 192, 203, 0.3);
+}
+
+.card-header {
+    background: linear-gradient(135deg, var(--sisi-primary) 0%, var(--sisi-accent) 100%);
+    border-bottom: none;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* === HERO SECTION === */
+.hero-banner {
+    background: linear-gradient(135deg, var(--sisi-light) 0%, var(--sisi-secondary) 100%);
+    border-radius: 20px;
+    padding: 50px;
+    margin: 30px 0;
+    text-align: center;
+    border: 3px solid var(--sisi-primary);
+}
+
+.hero-title {
+    color: var(--sisi-dark);
+    font-family: 'Dancing Script', cursive;
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(255, 192, 203, 0.3);
+}
+
+.hero-subtitle {
+    color: var(--sisi-text-dark);
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+/* === CATEGORY BADGES === */
+.category-badge {
+    background: var(--sisi-primary);
+    color: #ffffff;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: inline-block;
+    margin: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.category-badge:hover {
+    background: var(--sisi-accent);
+    color: #ffffff;
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+/* === PRICE STYLING === */
+.price {
+    color: var(--sisi-dark);
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.old-price {
+    color: #999;
+    text-decoration: line-through;
+    font-size: 1rem;
+    margin-right: 10px;
+}
+
+/* === FORM STYLING === */
+.form-control {
+    border: 2px solid var(--sisi-light);
+    border-radius: 10px;
+    padding: 12px 15px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: var(--sisi-primary);
+    box-shadow: 0 0 0 0.2rem rgba(255, 192, 203, 0.25);
+}
+
+.form-label {
+    color: var(--sisi-text-dark);
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+/* === FOOTER === */
+.footer {
+    background: linear-gradient(135deg, var(--sisi-dark) 0%, var(--sisi-primary) 100%);
+    color: #ffffff;
+    padding: 40px 0;
+    margin-top: 50px;
+}
+
+.footer h5 {
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.footer a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer a:hover {
+    color: var(--sisi-light);
+    text-decoration: underline;
+}
+
+/* === SIDEBAR === */
+.sidebar {
+    background: var(--sisi-secondary);
+    border-right: 3px solid var(--sisi-primary);
+    padding: 20px;
+}
+
+.sidebar-title {
+    color: var(--sisi-dark);
+    font-weight: 600;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--sisi-primary);
+}
+
+/* === SPECIAL ELEMENTS === */
+.bomboniere-icon {
+    color: var(--sisi-primary);
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.elegant-border {
+    border: 2px solid var(--sisi-primary);
+    border-radius: 15px;
+    padding: 20px;
+    background: var(--sisi-secondary);
+}
+
+.text-sisi-primary {
+    color: var(--sisi-primary) !important;
+}
+
+.text-sisi-dark {
+    color: var(--sisi-dark) !important;
+}
+
+.bg-sisi-primary {
+    background-color: var(--sisi-primary) !important;
+}
+
+.bg-sisi-light {
+    background-color: var(--sisi-light) !important;
+}
+
+/* === ANIMATIONS === */
+@keyframes sisi-fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.sisi-fade-in {
+    animation: sisi-fadeIn 0.8s ease-out;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .navbar-brand {
+        font-size: 1.8rem !important;
+    }
+}
+
+/* === ADMIN DASHBOARD CUSTOMIZATION === */
+.dashboard-header {
+    background: linear-gradient(135deg, var(--sisi-primary) 0%, var(--sisi-accent) 100%);
+    color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+.dashboard-card {
+    border-left: 4px solid var(--sisi-primary);
+    transition: all 0.3s ease;
+}
+
+.dashboard-card:hover {
+    border-left-color: var(--sisi-accent);
+    box-shadow: 0 8px 25px rgba(255, 192, 203, 0.3);
+}
+
+/* === TABLE STYLING === */
+.table thead th {
+    background: var(--sisi-primary);
+    color: #ffffff;
+    border: none;
+    font-weight: 600;
+}
+
+.table tbody tr:hover {
+    background: var(--sisi-light);
+}
+
+/* === BREADCRUMB === */
+.breadcrumb {
+    background: var(--sisi-light);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.breadcrumb-item.active {
+    color: var(--sisi-dark);
+    font-weight: 500;
+}
+
+/* === ADMIN MENU === */
+.main-menu .sub-menu li a i {
+    margin-right: 8px;
+    color: var(--sisi-primary);
+    width: 16px;
+}
+
+.main-menu ul li.admin-menu > a {
+    background: linear-gradient(135deg, var(--sisi-light) 0%, var(--sisi-secondary) 100%);
+    border-radius: 8px;
+    padding: 8px 15px;
+    font-weight: 600;
+    border: 2px solid var(--sisi-primary);
+    transition: all 0.3s ease;
+}
+
+.main-menu ul li.admin-menu > a:hover {
+    background: linear-gradient(135deg, var(--sisi-primary) 0%, var(--sisi-accent) 100%);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 192, 203, 0.3);
+}
+
+.main-menu ul li.admin-menu .sub-menu {
+    border: 2px solid var(--sisi-primary);
+    border-radius: 10px;
+    background: var(--sisi-secondary);
+    box-shadow: 0 8px 25px rgba(255, 192, 203, 0.2);
+}
+
+.main-menu ul li.admin-menu .sub-menu li a {
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+}
+
+.main-menu ul li.admin-menu .sub-menu li a:hover {
+    background: var(--sisi-light);
+    border-left-color: var(--sisi-primary);
+    color: var(--sisi-dark);
+    padding-left: 20px;
+}
+
+/* === ALERTS === */
+.alert-success {
+    background: var(--sisi-light);
+    border: 2px solid var(--sisi-primary);
+    color: var(--sisi-dark);
+    border-radius: 10px;
+}
+
+.alert-info {
+    background: var(--sisi-secondary);
+    border: 2px solid var(--sisi-accent);
+    color: var(--sisi-text-dark);
+    border-radius: 10px;
+}

@@ -1,0 +1,216 @@
+/*
+ * CSS Personalizzato per il sito E-commerce Italiano
+ * Miglioramenti e personalizzazioni per il mercato italiano
+ */
+
+/* Miglioramenti tipografici per l'italiano */
+body {
+    font-family: 'Lato', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+/* Stili per la navbar personalizzata italiana */
+.language-dropdown-active {
+    color: #3BB77E !important;
+    font-weight: 600;
+}
+
+.language-dropdown li button {
+    border: none;
+    background: none;
+    padding: 8px 15px;
+    width: 100%;
+    text-align: left;
+    transition: background-color 0.3s ease;
+}
+
+.language-dropdown li button:hover {
+    background-color: #f8f9fa;
+    color: #3BB77E;
+}
+
+/* Miglioramenti per i prodotti */
+.product-cart-wrap {
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.product-cart-wrap:hover {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    transform: translateY(-2px);
+}
+
+/* Miglioramenti per i bottoni */
+.btn-primary {
+    background: linear-gradient(135deg, #3BB77E 0%, #2A9F5F 100%);
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #2A9F5F 0%, #248F56 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(59, 183, 126, 0.3);
+}
+
+/* Miglioramenti per le categorie */
+.category-card {
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.category-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Stili per la pagina di checkout */
+.checkout-summary {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 12px;
+    padding: 24px;
+    border: 1px solid #dee2e6;
+}
+
+/* Miglioramenti per l'admin panel */
+.admin-card {
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.admin-card:hover {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* Stili per i form */
+.form-control {
+    border-radius: 8px;
+    border: 1px solid #e0e6ed;
+    padding: 12px 16px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #3BB77E;
+    box-shadow: 0 0 0 0.2rem rgba(59, 183, 126, 0.25);
+}
+
+/* Miglioramenti per il footer */
+.footer-brand {
+    color: #3BB77E;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+/* Stili responsivi migliorati */
+@media (max-width: 768px) {
+    .product-cart-wrap {
+        margin-bottom: 20px;
+    }
+    
+    .language-dropdown {
+        right: 0;
+        left: auto;
+    }
+}
+
+/* Animazioni fluide */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Miglioramenti per i badge */
+.badge {
+    border-radius: 6px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+}
+
+.badge.alert-success {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    color: white;
+}
+
+/* Stili per i messaggi di stato */
+.alert {
+    border-radius: 8px;
+    border: none;
+    padding: 16px 20px;
+    font-weight: 500;
+}
+
+.alert-success {
+    background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+    color: #155724;
+}
+
+.alert-danger {
+    background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
+    color: #721c24;
+}
+
+/* Miglioramenti per la ricerca */
+.search-form input {
+    border-radius: 25px 0 0 25px;
+    border: 2px solid #3BB77E;
+    padding: 12px 20px;
+}
+
+.search-form button {
+    border-radius: 0 25px 25px 0;
+    background: #3BB77E;
+    border: 2px solid #3BB77E;
+    color: white;
+    padding: 12px 20px;
+}
+
+/* Stili per il carrello */
+.cart-icon {
+    position: relative;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #dc3545;
+    color: white;
+    border-radius: 50%;
+    font-size: 0.75rem;
+    font-weight: 700;
+    min-width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Miglioramenti per le immagini dei prodotti */
+.product-image {
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.product-image:hover {
+    transform: scale(1.02);
+}
