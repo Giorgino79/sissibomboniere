@@ -13,27 +13,6 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 from pathlib import Path
 import os
 
-# Heroku Production Settings
-if 'DYNO' in os.environ:
-    # We're on Heroku
-    ALLOWED_HOSTS = ['*']
-    DEBUG = False
-    
-    # Database
-    import dj_database_url
-    DATABASES = {
-        'default': dj_database_url.config(
-            default='sqlite:///db.sqlite3',
-            conn_max_age=600,
-            conn_health_checks=True,
-        )
-    }
-    
-    # Static files for production
-    STATIC_ROOT = BASE_DIR / 'staticfiles'
-    MIDDLEWARE.insert(1, 'whitenoise.middleware.WhiteNoiseMiddleware')
-    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -48,6 +27,12 @@ SECRET_KEY = 'django-insecure-qf$-c)^k%3u7--ui8z#m9j&p8r_$^)xrp_xe!dpuhk!rkk$!#%
 DEBUG = True
 
 ALLOWED_HOSTS = []
+
+# Heroku Production Settings
+if 'DYNO' in os.environ:
+    # We're on Heroku
+    ALLOWED_HOSTS = ['*']
+    DEBUG = False
 
 
 # Application definition
@@ -75,6 +60,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -116,6 +102,15 @@ DATABASES = {
     }
 }
 
+# Heroku Database Configuration
+if 'DYNO' in os.environ:
+    import dj_database_url
+    DATABASES['default'] = dj_database_url.config(
+        default='sqlite:///db.sqlite3',
+        conn_max_age=600,
+        conn_health_checks=True,
+    )
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
@@ -154,6 +149,10 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR.parent / 'static']
 STATIC_ROOT = BASE_DIR.parent / 'staticfiles'
+
+# Heroku Static Files Configuration
+if 'DYNO' in os.environ:
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR.parent / 'media'
