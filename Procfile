@@ -1,0 +1,1 @@
+web: gunicorn sisi3.wsgi:application --log-file -
